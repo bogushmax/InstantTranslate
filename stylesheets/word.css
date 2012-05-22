@@ -1,0 +1,15 @@
+.instant-translate-active .word {
+  cursor: pointer;
+  border-radius: 12px;
+}
+.instant-translate-active .word:hover {
+  background: rgba(158, 255, 0, 0.1);
+}
+.instant-translate-active .word:active {
+  background: rgba(158, 255, 0, 0.3);
+}
+.instant-translate-active .word-highlighted,
+.instant-translate-active .word-highlighted:hover,
+.instant-translate-active .word-highlighted:active {
+  background: rgba(158, 255, 0, 0.5);
+}

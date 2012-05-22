@@ -1,0 +1,26 @@
+{
+  "name": "Instant Translate",
+  "version": "0.1",
+  "description": "One-click translate extension",
+  "icons": {
+    "16": "icons/icon_16.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "background_page": "views/background.html",
+  "browser_action": {
+    "default_icon": "icons/icon_19.png"
+  },
+  "permissions": [
+    "tabs",
+    "http://translate.google.ru/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "http://*.smashingmagazine.com/*" ],
+      "css": [ "stylesheets/word.css" ],
+      "js": [ "libraries/jquery-1.7.1.min.js", "libraries/content_script.js" ],
+      "run_at": "document_end"
+    }
+  ]
+}

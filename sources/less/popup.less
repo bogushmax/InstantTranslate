@@ -1,0 +1,89 @@
+html, body {
+  margin:  0px;
+  padding: 0px;
+}
+
+#popup {
+  width: 300px;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  &-content {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #ffe680;  
+    h1, p {
+      position: relative;
+      z-index: 2;
+      -webkit-user-select: none;    
+    }
+    h1 {
+      font-family: sans-serif;
+      margin: 0px;
+      font-size: 17px;
+      font-weight: bold;      
+    }
+    p {
+      font-family: serif;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      font-size: 15px;
+      font-style: italic;      
+    }
+    &:before, &:after {
+      content: '';
+      position: absolute;
+    }
+    &, &:before, &:after {
+      background: #ffeeaa;      
+    }
+    &:before, &:after {
+      width: 20px;
+      height: 20px;
+      -webkit-transform: rotate(45deg);
+      bottom: -11px;
+      left: 200px;
+      border-bottom: 2px solid #ffe680;
+      border-right: 2px solid #ffe680;
+      position: absolute;      
+    }
+    &:before {
+      z-index: -1;
+    }
+    &:after {
+      z-index: 1;
+    }
+    &, &:before {
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+    }
+  }
+  &-cross {
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+    margin-right: 5px;
+    float: right;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    &:before, &:after {
+      content: '';
+      width: 2px;
+      height: 15px;
+      background: black;
+      position: absolute;
+      right: 5px;      
+    }
+    &:hover:before, &:hover:after {
+      background: grey;
+    }
+    &:before {
+      -webkit-transform: rotate(45deg);
+    }
+    &:after {
+      -webkit-transform: rotate(-45deg);
+    }
+  }
+}
